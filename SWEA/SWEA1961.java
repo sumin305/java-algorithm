@@ -5,7 +5,7 @@ public class SWEA1961 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
-        for (int c = 0; c < T; c ++) {
+        for (int c = 1; c <= T; c ++) {
             int N = sc.nextInt();
             String[] result = new String[N];
             Arrays.fill(result, "");
@@ -15,34 +15,20 @@ public class SWEA1961 {
                     arr[i][j] = sc.nextInt();
                 }
             }
-            // 3번씩 돌린다
-            for (int k = 0; k < 3; k ++) {
-                int[][] temp = new int[N][N];
-                for (int i = 0; i < N; i ++) {
-                    for (int j = 0; j < N; j ++) {
-                        temp[j][i] = arr[i][j];
-                    }
-                }
-                for (int i = 0; i < N; i ++) {
-                    for (int j = 0; j < N/2; j ++) {
-                        int tmp = temp[i][j];
-                        temp[i][j] = temp[i][N- j - 1];
-                        temp[i][N- j - 1] = tmp;
-                    }
-                }
-                arr = temp;
-                for (int i = 0; i < N; i ++) {
-                    for (int j = 0; j < N; j ++) {
-                        result[i] += arr[i][j];
-                    }
-                }
-                for (int i = 0; i < N; i ++) {
-                    result[i] +=" ";
-                }
-            }
-            System.out.println("# " + (c + 1));
+            System.out.println("#" + c);
             for (int i = 0; i < N; i ++) {
-                System.out.println(result[i]);
+                for (int j = N-1; j >= 0; j --) {
+                    System.out.print(arr[j][i]);
+                }
+                System.out.print(" ");
+                for (int j = N-1; j >= 0; j --) {
+                    System.out.print(arr[N-1-i][j]);
+                }
+                System.out.print(" ");
+                for (int j = 0; j < N; j ++) {
+                    System.out.print(arr[j][N-1-i]);
+                }
+                System.out.println();
             }
         }
     }

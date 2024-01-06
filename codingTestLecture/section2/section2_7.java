@@ -15,7 +15,6 @@ public class section2_7 {
                 count = 0;
             }
         }
-        score += count;
         System.out.println(score);
     }
 }

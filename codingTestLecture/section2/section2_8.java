@@ -1,5 +1,4 @@
 package codingTestLecture.section2;
-import java.lang.reflect.Array;
 import java.util.*;
 public class section2_8 {
     public static void main(String[] args) {

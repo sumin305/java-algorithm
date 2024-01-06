@@ -1,4 +1,4 @@
-package codingTestLecture;
+package codingTestLecture.section2;
 import java.util.Arrays;
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package coding_test;
+package codingTestLecture.section1;
 import java.util.*;
 
 

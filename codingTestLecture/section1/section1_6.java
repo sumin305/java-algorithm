@@ -1,7 +1,5 @@
-package codingTestLecture;
+package codingTestLecture.section1;
 import java.util.Scanner;
-import java.util.HashSet;
-import java.util.Set;
 
 public class section1_6 {
     public String solution(String str) {

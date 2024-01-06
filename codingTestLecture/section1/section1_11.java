@@ -1,4 +1,4 @@
-package codingTestLecture;
+package codingTestLecture.section1;
 import java.util.*;
 
 public class section1_11 {

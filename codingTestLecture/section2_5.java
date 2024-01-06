@@ -5,22 +5,15 @@ public class section2_5 {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int count = 0;
-
+        int[] check = new int[N+1];
         for (int i = 2; i <= N; i++) {
-            if (isPrimeNumber(i)) {
-                count += 1;
+            if (check[i] == 0) {
+                for (int j = 1; j * i <= N; j ++) {
+                    check[j * i] ++;
+                }
+                count ++;
             }
         }
         System.out.println(count);
-    }
-    public static boolean isPrimeNumber(int n) {
-        int i = 2;
-        while (i < n) {
-            if (n % i == 0) {
-                return false;
-            }
-            i += 1;
-        }
-        return true;
     }
 }
